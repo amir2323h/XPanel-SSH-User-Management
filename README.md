@@ -98,7 +98,7 @@ bash /root/xpanel.sh OR bash xpanel.sh  OR xpanel
 **Nginx Web Server**
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/install.sh --ipv4)
+bash <(curl -Ls https://raw.githubusercontent.com/amir2323h/XPanel-SSH-User-Management/master/install.sh --ipv4)
 ```
 
 حل مشکل عدم ارتباط  تماس صوتی و تصویری در اپلیکشن
