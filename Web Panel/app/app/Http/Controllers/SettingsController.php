@@ -77,6 +77,7 @@ class SettingsController extends Controller
         if (!is_string($name)) {
             abort(400, 'Not Valid Username');
         }
+
         $setting = Settings::all();
         $ipadapter = Ipadapter::all();
         $iplist = Adapterlist::all();
@@ -477,6 +478,7 @@ class SettingsController extends Controller
                 $protocol=$user['protocol_sb'];
                 $detail_sb=$user['detail_sb'];
                 $name=$user['name'];
+                $multiuser=$user['multiuser'];
                 $check_user = Singbox::where('port_sb',$port)->count();
                 if ($check_user > 0) {
                     $jsonData = json_decode($detail_sb, true);
@@ -487,7 +489,8 @@ class SettingsController extends Controller
                         'protocol'=>$protocol,
                         'sid'=>$sid,
                         'uuid'=>$uuid,
-                        'name'=>$name
+                        'name'=>$name,
+                        'multiuser'=>$multiuser,
                     ];
 
                     ProController::active_singbox($validatedData);
